@@ -1,3 +1,5 @@
+# Day 1: 30 Days of python programming
+
 print(3 + 4)    # add
 print(3 - 4)    # minus
 print(3 * 4)    # multiply
