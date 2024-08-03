@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class = "container">
+    <h1>Results of Analysis</h1>
+    <p>
+        <strong>Total number of words:</strong> {{words}}
+        <br>
+        <strong>Total number of characters:</strong> {{characters}}
+    </p>
+    <table style ="border: 1px solid black; width: 80%;">
+        <tr>
+            <th style ="border: 1px solid black"><strong>Word</strong></th>
+            <th style ="border: 1px solid black"><strong>Occurrences</strong></th>
+        </tr>
+        {% for entry in frequency %}
+        <tr>
+            <td style ="border: 1px solid black; text-align: center;">{{entry[0]}}</td>
+            <td style ="border: 1px solid black; text-align: center;">{{entry[1]}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
