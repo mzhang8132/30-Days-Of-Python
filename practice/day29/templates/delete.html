@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8" />
+        <meta name = "viewport" content = "width=device-width, inital-scale=1.0" />
+        <title>30 Days of Python - Cars DB Delete</title> 
+    </head>
+    <body>
+        <table style = "border: 1px solid black; width: 80%;">
+            <tr>
+                <th style ="border: 1px solid black"><strong>ID</strong></th>
+                <th style ="border: 1px solid black"><strong>Car name</strong></th>
+                <th style ="border: 1px solid black"><strong>Make</strong></th>
+                <th style ="border: 1px solid black"><strong>Wheels</strong></th>
+                <th style ="border: 1px solid black"><strong>Doors</strong></th>
+                <th style ="border: 1px solid black"></th>
+            </tr>
+            <form action = "/cars/delete" method = "POST">
+            {% for i in range(entries) %}
+            <tr>
+                <td style ="border: 1px solid black">{{ids[i]}}</td>
+                <td style ="border: 1px solid black">{{names[i]}}</td>
+                <td style ="border: 1px solid black">{{makes[i]}}</td>
+                <td style ="border: 1px solid black">{{wheels[i]}}</td>
+                <td style ="border: 1px solid black">{{doors[i]}}</td>
+                <td style ="border: 1px solid black">
+                    <input type ="hidden" name ="id" value ="{{ids[i]}}">
+                    <input type ="submit" class ="btn" value = "Delete Car" />
+                </td>
+            </tr>
+            {% endfor %}
+            </form>    
+        </table>
+        
+    </body>
+</html>

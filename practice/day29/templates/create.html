@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8" />
+        <meta name = "viewport" content = "width=device-width, inital-scale=1.0" />
+        <title>30 Days of Python - Cars DB</title> 
+    </head>
+    <body>
+        <h1>Create new car</h1>
+        <form action = "/cars/create" method = "POST">
+            <label for="name">Car name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="make">Car make:</label><br>
+            <input type="text" id="make" name="make"><br>
+            <label for="wheels">Number of wheels:</label><br>
+            <input type="text" id="wheels" name="wheels"><br>
+            <label for="door">Number of doors:</label><br>
+            <input type="text" id="door" name="door"><br>
+            <input type = "submit" class = "btn" value = "Add Car" />
+        </form>
+    </body>
+</html>
